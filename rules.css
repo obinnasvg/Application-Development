@@ -1,0 +1,133 @@
+#map {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* Location button - top right */
+.Button_locate {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+
+    background: white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.Button_locate:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+/* Measurement button - directly below location button */
+.Button_measure {
+    position: absolute;
+    top: 75px;
+    right: 15px;
+    z-index: 1000;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+
+    background: white;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.Button_measure:hover {
+    background-color: #f8f9fa;
+    color: #0056b3;
+}
+
+#measure.active {
+    background-color: #ffc107;
+    color: #000;
+    box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.5);
+}
+
+#measure-result {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 8px 18px;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-weight: bold;
+    z-index: 1000;
+}
+#measure-result {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: rgba(255, 255, 255, 0.95);
+    color: #1f2937;
+
+    padding: 12px 22px;
+    border-radius: 999px;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    font-weight: 700;
+
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+#measure-result i {
+    margin-right: 6px;
+    color: #e63946;
+}
+
+#measure.active {
+    background-color: #e63946;
+    color: white;
+    box-shadow: 0 0 0 4px rgba(230, 57, 70, 0.25);
+}
+
+#Button_locate.locating {
+    background-color: #3388ff;
+    color: white;
+    animation: pulseLocate 1s infinite;
+}
+
+@keyframes pulseLocate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(51, 136, 255, 0.45);
+    }
+
+    70% {
+        box-shadow: 0 0 0 12px rgba(51, 136, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(51, 136, 255, 0);
+    }
+}
