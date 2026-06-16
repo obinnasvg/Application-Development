@@ -2,6 +2,30 @@
     width: 100%;
     height: 100vh;
     position: relative;
+    
+}
+
+body {
+    margin: 0;
+    font-family: Segoe UI, Arial, Helvetica, sans-serif;
+}
+
+.page-heading {
+    width: 100%;
+    background: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    z-index: 2000;
+    position: relative;
+}
+
+.page-heading h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
 }
 
 /* Location button - top right */

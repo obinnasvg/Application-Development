@@ -3,20 +3,30 @@
     <head>
         <link rel="stylesheet" href="rules.css"> <!--links the css with the html-->
         <!-- <meta charset="UTF-8"> -->
-        <title>My HTML</title>
+        <title>Mberede Benedict - IP Application Development Assignment</title>
+
         <link rel="stylesheet" href="https://openlayers.org/en/v4.6.5/css/ol.css" type="text/css">
+
         <!--awesome font for icons-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     </head>
+
     <body>
+
+        <header class="page-heading">
+            <h1>Mberede Benedict's Submission for IP: Application Development Assignment</h1>
+        </header>
+
         <div id="map" class="map" tabindex="0">
-            <button id="Button_locate" class="Button_locate">
+            <button id="Button_locate" class="Button_locate" title="Locate me">
                 <i class="fa-solid fa-location-crosshairs"></i>
             </button>
+
             <button id="measure" class="Button_measure" title="Measure distance">
                 <i class="fa-solid fa-ruler"></i>
             </button>
         </div>
+
         <button id="zoom-out">Zoom out</button>
         <button id="zoom-in">Zoom in</button>
         <button id="reset">Reset</button>
@@ -24,9 +34,12 @@
         <button id="right">Right</button>
         <button id="up">Up</button>
         <button id="down">Down</button>
+
         <div id="measure-result"></div>
+
         <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=requestAnimationFrame,Element.prototype.classList,URL"></script>
         <script src="https://openlayers.org/en/v4.6.5/build/ol.js"></script>
         <script src="mainmap.js"></script>
+
     </body>
 </html>
